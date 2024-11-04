@@ -372,44 +372,6 @@ Children:
         Type: PropertyType
         DataType: NodeId
         Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-      - Name: ConditionalConverter1
-        Type: ConditionalConverter
-        Children:
-        - Name: Condition
-          Type: BaseDataVariableType
-          DataType: Boolean
-          ReferenceType: HasSource
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Expression
-              Type: BaseDataVariableType
-              DataType: String
-              ReferenceType: HasParameter
-              ModellingRule: Optional
-              Value: "{0} > 800"
-            - Name: ns=3;Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Window}/Width"
-        - Name: TrueValue
-          Type: BaseDataVariableType
-          DataType: NodeId
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "/Objects/Webinar_Grafica_Responsiva_04_11_2024/UI/Screens/Big_Screen"
-        - Name: FalseValue
-          Type: BaseDataVariableType
-          DataType: NodeId
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "/Objects/Webinar_Grafica_Responsiva_04_11_2024/UI/Screens/Small_Screen"
     - Name: CurrentPanel
       Type: NodePointer
       DataType: NodeId
